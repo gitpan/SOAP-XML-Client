@@ -1,5 +1,10 @@
 Revision history
 
+2.0 Sun Feb 18 15:09:06 GMT 2007
+	- Replace s/xmlns=".+?"//g with s/xmlns=".*?"//g 
+      for servers sending xmlns="", thanks to David Hall 
+      for the heads up
+
 1.9 Mon May 29 10:00:39 BST 2006
 	- Switch to SOAP::XML::Client name space
 	- renamed 'Real' to 'Generic'
