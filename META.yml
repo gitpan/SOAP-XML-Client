@@ -1,16 +1,28 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         SOAP-XML-Client
-version:      2.1
-version_from: 
-installdirs:  site
+--- #YAML:1.0
+name:               SOAP-XML-Client
+version:            2.2
+abstract:           Module for simply interacting with SOAP webservices
+author:
+    - Leo Lapworth
+license:            unknown
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
 requires:
-    Class::Accessor::Fast:         0.19
-    File::Slurp:                   0.1
-    SOAP::Data::Builder:           0.8
-    SOAP::Lite:                    0.67
-    Test::More:                    0.6
-    XML::LibXML:                   0.6
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30_01
+    Class::Accessor::Fast:  0.19
+    Encode:               0
+    File::Slurp:          0.1
+    SOAP::Data::Builder:  0.8
+    SOAP::Lite:           0.67
+    Test::More:           0.6
+    XML::LibXML:          0.6
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.52
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4
