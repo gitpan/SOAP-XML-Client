@@ -21,7 +21,7 @@ __PACKAGE__->mk_accessors(@methods);
 
 $DEBUG = 0;
 
-$VERSION = 2.3;
+$VERSION = 2.4;
 
 # Get an XML Parser
 my $parser = XML::LibXML->new();
@@ -192,7 +192,7 @@ sub fetch {
         if ($@) {
 
             # Not valid xml
-            $self->error('Unable to parse returned data as XML');
+            $self->error('Unable to parse returned data as XML: ' . $@);
             return undef;
         } else {
 
