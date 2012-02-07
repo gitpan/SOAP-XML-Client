@@ -1,5 +1,10 @@
 Revision history
 
+2.5 Tue Feb  2 2012
+    - Fix for timeout (which never worked!)
+    - Add status() to use after fetch()
+    - Better error checking (if it's a transport fail)
+
 2.4 Wed Jun  1 2010
     - Add XML Parser warning message to returned error - helps with debugging
 
