@@ -1,4 +1,7 @@
 package SOAP::XML::Client::DotNet;
+{
+  $SOAP::XML::Client::DotNet::VERSION = '2.26';
+}
 
 use strict;
 use Carp;

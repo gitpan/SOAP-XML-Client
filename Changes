@@ -1,5 +1,10 @@
 Revision history
 
+2.6 Thu 8 Nov 2012
+    - encode string data when bypassing base64 conversion (mjemmeson)
+    - switch to distzilla
+    - merge in 2.5 to git repo, seemed to get missed
+
 2.5 Tue Feb  2 2012
     - Fix for timeout (which never worked!)
     - Add status() to use after fetch()

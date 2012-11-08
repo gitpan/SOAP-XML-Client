@@ -1,28 +1,32 @@
---- #YAML:1.0
-name:               SOAP-XML-Client
-version:            2.5
-abstract:           Module for simply interacting with SOAP webservices
+---
+abstract: 'Simple frame work for talking with web services'
 author:
-    - Leo Lapworth
-license:            unknown
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  0
+  - 'Leo Lapworth'
 build_requires:
-    ExtUtils::MakeMaker:  0
-requires:
-    Class::Accessor::Fast:  0.19
-    Encode:               0
-    File::Slurp:          0.1
-    SOAP::Data::Builder:  0.8
-    SOAP::Lite:           0.67
-    Test::More:           0.6
-    XML::LibXML:          0.6
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.56
+  Data::Dumper: 0
+  Test::More: 0
+  warnings: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300018, CPAN::Meta::Converter version 2.120921'
+license: perl
 meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: SOAP-XML-Client
+requires:
+  Carp: 0
+  Class::Accessor::Fast: 0
+  Encode: 0
+  File::Slurp: 0
+  SOAP::Data::Builder: 0.8
+  SOAP::Lite: 0.67
+  XML::LibXML: 0.6
+  base: 0
+  strict: 0
+  vars: 0
+resources:
+  bugtracker: https://github.com/ranguard/soap-xml-client/issues
+  repository: https://github.com/ranguard/soap-xml-client
+version: 2.26

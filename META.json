@@ -1,0 +1,57 @@
+{
+   "abstract" : "Simple frame work for talking with web services",
+   "author" : [
+      "Leo Lapworth"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.300018, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "SOAP-XML-Client",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.30"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : "0",
+            "Class::Accessor::Fast" : "0",
+            "Encode" : "0",
+            "File::Slurp" : "0",
+            "SOAP::Data::Builder" : "0.8",
+            "SOAP::Lite" : "0.67",
+            "XML::LibXML" : "0.6",
+            "base" : "0",
+            "strict" : "0",
+            "vars" : "0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Data::Dumper" : "0",
+            "Test::More" : "0",
+            "warnings" : "0"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/ranguard/soap-xml-client/issues"
+      },
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/ranguard/soap-xml-client",
+         "web" : "https://github.com/ranguard/soap-xml-client"
+      }
+   },
+   "version" : "2.26"
+}
+

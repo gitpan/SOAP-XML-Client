@@ -1,4 +1,7 @@
 package SOAP::XML::Client::Generic;
+{
+  $SOAP::XML::Client::Generic::VERSION = '2.26';
+}
 
 use strict;
 use Carp;
