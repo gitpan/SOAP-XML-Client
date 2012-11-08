@@ -1,6 +1,6 @@
 package SOAP::XML::Client;
 {
-  $SOAP::XML::Client::VERSION = '2.26';
+  $SOAP::XML::Client::VERSION = '2.6';
 }
 
 use strict;
