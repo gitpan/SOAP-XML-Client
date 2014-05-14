@@ -1,8 +1,5 @@
 package SOAP::XML::Client;
-{
-  $SOAP::XML::Client::VERSION = '2.6';
-}
-
+$SOAP::XML::Client::VERSION = '2.7';
 use strict;
 use Carp;
 use XML::LibXML 0.6;
@@ -388,7 +385,7 @@ in disable_base64:
    ...
 
 =head2 header()
- 
+
    my $header = SOAP::Header->name(
           SomeDomain => {
               Username => "a_user",
@@ -410,10 +407,10 @@ credential based authenditcation
 
   if($soap_client->fetch({ method => 'GetActivity', xml => $xml }) {
       # Get result as a string
-      my $xml_string = $soap_client->result();
+      my $xml_string = $soap_client->results();
 
       # Get result as a XML::LibXML object
-      my $xml_libxml_object = $soap_client->result_xml();
+      my $xml_libxml_object = $soap_client->results_xml();
 
   } else {
       # There was some sort of error
@@ -441,14 +438,14 @@ anything else you'll need to check for yourself.
   $soap_client->error();
 
 If fetch returns undef then check this method, it will either be that the filename you
-supplied couldn't be read, the XML you supplied was not correctly formatted (XML::LibXML 
+supplied couldn't be read, the XML you supplied was not correctly formatted (XML::LibXML
 could not parse it), there was a transport error with the web service or Fault/faultstring
 was found in the XML returned.
 
 =head2 status()
 
   $soap_client->status();
-  
+
 This is set to the http status after fetch has been called
 
 =head2 results();
@@ -479,7 +476,7 @@ smallest thing that causes a problem, mis-typed data (see _value_type in xml),
 or typo in xmlns line.
 
 If the type of module (e.g. SOAP::XML::Client::DotNet) doesn't work, switch
-to one of the other ones and see if that helps. 
+to one of the other ones and see if that helps.
 
 =head2 _call()
 
@@ -495,19 +492,19 @@ to one of the other ones and see if that helps.
 	# Impliment it! - below is the code from SOAP::XML::Client::DotNet
 
 	# This code is the .NET specific way of calling SOAP,
-	# it might work for other stuff as well        
+	# it might work for other stuff as well
         my $soap_action = sub {return $self->uri() . '/' . $method};
-        
+
         my $caller = $self->{soap}
                         ->uri($self->uri())
                         ->proxy($self->proxy(), timeout => $self->timeout())
                         ->on_action( $soap_action );
-        
+
         $caller->soapversion($self->soapversion());
 
         # Create a SOAP::Data node for the method name
         my $method_name = SOAP::Data->name($method)->attr({'xmlns' => $self->xmlns()});
-  
+
         # Execute the SOAP Request and get the resulting XML
         my $res = $caller->call( $method_name => $self->{sdb}->to_soap_data());
 

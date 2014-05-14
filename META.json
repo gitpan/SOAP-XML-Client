@@ -4,7 +4,7 @@
       "Leo Lapworth"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300018, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 5.016, CPAN::Meta::Converter version 2.141170",
    "license" : [
       "perl_5"
    ],
@@ -19,6 +19,11 @@
             "ExtUtils::MakeMaker" : "6.30"
          }
       },
+      "develop" : {
+         "requires" : {
+            "Test::Pod" : "1.41"
+         }
+      },
       "runtime" : {
          "requires" : {
             "Carp" : "0",
@@ -27,6 +32,7 @@
             "File::Slurp" : "0",
             "SOAP::Data::Builder" : "0.8",
             "SOAP::Lite" : "0.67",
+            "Scalar::Util" : "0",
             "XML::LibXML" : "0.6",
             "base" : "0",
             "strict" : "0",
@@ -35,7 +41,7 @@
       },
       "test" : {
          "requires" : {
-            "Data::Dumper" : "0",
+            "Test::Memory::Cycle" : "0",
             "Test::More" : "0",
             "warnings" : "0"
          }
@@ -52,6 +58,6 @@
          "web" : "https://github.com/ranguard/soap-xml-client"
       }
    },
-   "version" : "2.6"
+   "version" : "2.7"
 }
 
